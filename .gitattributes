@@ -1,0 +1,32 @@
+# GitHub language detection for August smart contract files
+# Using Solidity as the closest match for August smart contracts
+*.aug linguist-language=Solidity linguist-detectable=true
+*.august linguist-language=Solidity linguist-detectable=true
+
+# Ensure proper language detection for other files
+*.rs linguist-language=Rust
+*.js linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.json linguist-language=JSON
+*.md linguist-language=Markdown
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
+*.toml linguist-language=TOML
+
+# Documentation and config files
+Cargo.toml linguist-language=TOML
+Cargo.lock linguist-generated=true
+
+# Exclude generated files from language statistics
+dist/ linguist-generated=true
+build/ linguist-generated=true
+target/ linguist-generated=true
+backend/target/ linguist-generated=true
+node_modules/ linguist-generated=true
+.next/ linguist-generated=true
+*.min.js linguist-generated=true
+*.min.css linguist-generated=true
+
+# Exclude other build artifacts
+*.lock linguist-generated=true
+.rustc_info.json linguist-generated=true

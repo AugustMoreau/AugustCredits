@@ -1,0 +1,80 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "serde",
+    "sqlx",
+    "rustls",
+    "chrono",
+    "thiserror",
+    "dotenvy",
+    "jsonwebtoken",
+    "reqwest",
+    "httpmock",
+    "tracing",
+    "tower",
+    "axum",
+    "tokio",
+    "uuid",
+    "anyhow",
+    "struct",
+    "enum",
+    "impl",
+    "trait",
+    "mod",
+    "use",
+    "pub",
+    "crate",
+    "async",
+    "await",
+    "dyn",
+    "Box",
+    "Arc",
+    "Mutex",
+    "RwLock",
+    "Option",
+    "Result",
+    "Ok",
+    "Err",
+    "Some",
+    "None",
+    "Vec",
+    "String",
+    "str",
+    "u8",
+    "u16",
+    "u32",
+    "u64",
+    "usize",
+    "i8",
+    "i16",
+    "i32",
+    "i64",
+    "isize",
+    "f32",
+    "f64",
+    "bool"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/target/**",
+    "**/Cargo.lock",
+    "**/.git/**",
+    "**/.cargo/**",
+    "**/*.rs"
+  ],
+  "ignoreRegExpList": [
+    "[a-z]+(_[a-z]+)+",
+    "[A-Z]+(_[A-Z]+)+",
+    "\\b[A-Z]\\b"
+  ],
+  "languageSettings": [
+    {
+      "languageId": "rust",
+      "includeRegExpList": [
+        "(?s)/\\*.*?\\*/|//.*?$",
+        "(?s)r#?\".*?\""
+      ]
+    }
+  ]
+}

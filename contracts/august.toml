@@ -1,0 +1,25 @@
+[package]
+name = "august-credits"
+version = "1.0.0"
+authors = ["AugustCredits Team"]
+edition = "2023"
+description = "Usage-based micro-payments for APIs using Augustium smart contracts"
+license = "MIT"
+
+[dependencies]
+std = "1.0"
+math = "1.0"
+token = "1.0"
+
+[build]
+target = "evm"
+optimization = "size"
+
+[networks]
+mainnet = { rpc = "https://mainnet.infura.io/v3/YOUR_PROJECT_ID" }
+polygon = { rpc = "https://polygon-rpc.com" }
+testnet = { rpc = "https://goerli.infura.io/v3/YOUR_PROJECT_ID" }
+
+[deployment]
+gas_limit = 3000000
+gas_price = "20gwei"

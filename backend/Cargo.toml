@@ -1,0 +1,80 @@
+[package]
+name = "august-credits-backend"
+version = "0.1.0"
+edition = "2021"
+authors = ["AugustCredits Team"]
+description = "Backend API gateway for AugustCredits usage-based billing system"
+license = "MIT"
+
+[dependencies]
+# Web framework
+axum = "0.7"
+tokio = { version = "1.0", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+hyper = "1.0"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+rust_decimal = "1.32"
+
+# Blockchain integration
+ethers = "2.0"
+ethers-contract = "2.0"
+ethers-providers = "2.0"
+ethers-signers = "2.0"
+
+# Utilities
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Configuration
+config = "0.14"
+dotenvy = "0.15"
+
+# Authentication and security
+jsonwebtoken = "9.0"
+sha2 = "0.10"
+hex = "0.4"
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json"] }
+
+# Cryptography and data handling
+md5 = "0.7"
+bytes = "1.0"
+
+# Rate limiting
+governor = "0.6"
+
+# Metrics and monitoring
+prometheus = "0.13"
+
+# Async utilities
+futures = "0.3"
+tokio-stream = "0.1"
+serde_urlencoded = "0.7.1"
+
+[dev-dependencies]
+tokio-test = "0.4"
+httpmock = "0.6"
+
+[features]
+default = []
+test-utils = []
+
+[[bin]]
+name = "august-credits-gateway"
+path = "src/main.rs"
+
+[[bin]]
+name = "august-credits-worker"
+path = "src/worker.rs"
